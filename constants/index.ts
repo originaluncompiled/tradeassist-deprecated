@@ -6,21 +6,21 @@ type strategyItem = {
 
 export const strategyChecklist: strategyItem[] = [
   {
-    title: 'Bias: (If 1hr = 4hr: Scale to 5min; Else 15min)',
+    title: 'Pre-Market Trend:',
     type: 'checkbox',
     items: [
       '1hr Bullish',
       '1hr Bearish',
-      '4r Bullish',
+      '4hr Bullish',
       '4hr Bearish',
     ]
   },
   {
-    title: 'Switched Bias: (If Opposite Confluence Got Hit First)',
+    title: 'What Got Hit First After Market Open?',
     type: 'radio',
     items: [
-      'Yes',
-      'No',
+      'A High',
+      'A Low',
     ]
   },
   {
