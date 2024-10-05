@@ -1,5 +1,6 @@
 type strategyItem = {
   title: string,
+  description?: string,
   type: 'radio' | 'checkbox',
   items: string[],
 }
@@ -7,6 +8,7 @@ type strategyItem = {
 export const strategyChecklist: strategyItem[] = [
   {
     title: 'Pre-Market Trend:',
+    description: 'Market trend 30mins before market open',
     type: 'checkbox',
     items: [
       '1hr Bullish',
@@ -17,14 +19,16 @@ export const strategyChecklist: strategyItem[] = [
   },
   {
     title: 'What Got Hit First After Market Open?',
+    description: 'Which liquidity sweep got hit first, determines what the bias is',
     type: 'radio',
     items: [
-      'A High',
-      'A Low',
+      'A High (bearish liq. sweep)',
+      'A Low (bullish liq. sweep)',
     ]
   },
   {
     title: 'Trend Confirmation:',
+    description: '* Required! BOS = iFVG (∴ just need one)',
     type: 'checkbox',
     items: [
       '1hr/4hr Liquidity Sweep (In-Line with Bias)',
@@ -33,7 +37,8 @@ export const strategyChecklist: strategyItem[] = [
     ]
   },
   {
-    title: '3rd Confluence: (At Least 1)',
+    title: '3rd Confluence:',
+    description: 'At Least 1',
     type: 'checkbox',
     items: [
       'Equilibrium',
@@ -42,7 +47,8 @@ export const strategyChecklist: strategyItem[] = [
     ]
   },
   {
-    title: '> Buying/Selling Pressure (Green/Red Candle that Closes Out of 3rd Confluence)',
+    title: '> Buying/Selling Pressure',
+    description: 'When there\'s a green/red candle that closes out of the 3rd confluence',
     type: 'radio',
     items: [
       'Scale Down Into the 1min (From 5min)',
@@ -50,7 +56,8 @@ export const strategyChecklist: strategyItem[] = [
     ]
   },
   {
-    title: 'Execution: (On ^ Lower Timeframe)',
+    title: 'Execution:',
+    description: 'Execute using the above chosen lower timeframe',
     type: 'radio',
     items: [
       'Inverse Fair Value Gap',
