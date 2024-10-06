@@ -1,5 +1,6 @@
 import React from 'react'
 import Section from './Section'
+import NewsDay from './NewsDay'
 
 // Try 3x to get news & then display "Sorry, Can't Get News" with a circular arrow and the bigger, bolder text "Retry"
 // Show Shadcn skeleton when loading news
@@ -10,8 +11,9 @@ import Section from './Section'
 const News = () => {
   return (
     <Section caption='News & Data'>
-      <p>- <a className='italic' href='https://docs.benzinga.com/benzinga-apis/calendar/get-economics' target='_blank'>Benzinga API</a></p>
-      <p>- <a className='italic' href='https://www.youtube.com/watch?v=ssRo5nVOvrQ&t=2s' target='_blank'>Build a webscraper for ForexFactory</a></p>
+      <NewsDay date='Thu, Oct 10' />
+      <NewsDay date='Fri, Oct 11' />
+      <p className='text-xs text-neutral-500'>* Newsdata from <a className='cursor-pointer italic font-semibold' href='https://www.forexfactory.com/' target='_blank'>ForexFactory</a></p>
     </Section>
   )
 }
